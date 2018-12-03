@@ -1,0 +1,21 @@
+package br.com.db1.db1start.exercicios;
+
+public class Exercicios {
+
+	public int somarDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm + numeroDois);
+	}
+	
+	public int subtrairDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm - numeroDois);
+	}
+	
+	public int multiplicaDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm * numeroDois);
+	}
+	
+	public int divideDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm * numeroDois);
+	}
+	
+}

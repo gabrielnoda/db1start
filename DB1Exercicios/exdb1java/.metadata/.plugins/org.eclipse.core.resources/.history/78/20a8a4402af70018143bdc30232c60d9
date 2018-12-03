@@ -1,0 +1,89 @@
+package br.com.db1.db1start.exercicios;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class exerciciosTeste {
+	
+	@Test
+	public void deveSomarDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int Soma = exercicio.somarDoisNumeros(5, 4);
+	Assert.assertEquals(9,Soma);
+	}
+	
+	@Test
+	public void deveSubtrairDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int subtrair = exercicio.subtrairDoisNumeros(5, 4);
+	Assert.assertEquals(1,subtrair);
+	}
+	
+	@Test
+	public void deveMultiplicarDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int resultadoMultiplicacao = exercicio.multiplicaDoisNumeros(5, 4);
+	Assert.assertEquals(20,resultadoMultiplicacao);
+	}
+	
+	@Test
+	public void deveDividirDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int resultadoDivisao = exercicio.divideDoisNumeros(6, 2);
+	Assert.assertEquals(3,resultadoDivisao);
+	}
+	
+	@Test
+	public void deveVerificarNumeroPar() {
+	Exercicios exercicio = new Exercicios();
+	int verificaPar = exercicio.verificaNumeroPar(6);
+	Assert.assertEquals(1, verificaPar);
+	}
+	
+	@Test
+	public void deveRetornarMaiorNumero() {
+	Exercicios exercicio = new Exercicios();
+	int maiorNumero = exercicio.verificaQualEMaior(5,9);
+	Assert.assertEquals(9, maiorNumero);
+	}
+	
+	@Test
+	public void deveMostrarNumerosImparesAteCem() {
+	Exercicios exercicio = new Exercicios();
+	int numerosImpar = exercicio.numerosImparesAteCem(90);
+	Assert.assertEquals(5, numerosImpar);
+	}
+	
+	//Strings
+	
+	@Test
+	public void deveDeixarTextoMaiusculo() {
+	Exercicios exercicio = new Exercicios();
+	String maiusculo = exercicio.devolverMaiuscula("texto maiusculo");
+	Assert.assertEquals("TEXTO MAIUSCULO", maiusculo);
+	}
+	
+	@Test
+	public void deveDeixarTextoMinusculo() {
+	Exercicios exercicio = new Exercicios();
+	String minuscula = exercicio.devolverMinuscula("TEXTO MINUSCULA");
+	Assert.assertEquals("texto minuscula", minuscula);
+	}
+	
+	@Test
+	public void deveDevolverQuantidadeDeLetras() {
+	Exercicios exercicio = new Exercicios();
+	int quantidaDeLetras = exercicio.tamanhoTexto(" DB1START ");
+	System.out.println(quantidaDeLetras);
+	Assert.assertEquals(8, quantidaDeLetras);
+	}
+	
+	@Test
+	public void deveDevolverQuantidadeDeLetrasComEspacamento() {
+	Exercicios exercicio = new Exercicios();
+	int quantidaDeLetrasEspaco = exercicio.tamanhoTexto(" DB1START ");
+	System.out.println(quantidaDeLetrasEspaco);
+	Assert.assertEquals(8, quantidaDeLetrasEspaco);
+	}
+	
+}

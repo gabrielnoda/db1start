@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="exerciciosTeste" project="ExerciciosJavaTest" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.db1.db1start.exercicios.exerciciosTeste" time="0.001">
+    <testcase name="deveSubtrairDoisNumeros" classname="br.com.db1.db1start.exercicios.exerciciosTeste" time="0.0"/>
+    <testcase name="deveSomarDoisNumeros" classname="br.com.db1.db1start.exercicios.exerciciosTeste" time="0.0"/>
+    <testcase name="deveMultiplicarDoisNumeros" classname="br.com.db1.db1start.exercicios.exerciciosTeste" time="0.0"/>
+  </testsuite>
+</testrun>

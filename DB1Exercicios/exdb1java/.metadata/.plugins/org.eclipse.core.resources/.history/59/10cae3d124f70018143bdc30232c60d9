@@ -1,0 +1,64 @@
+package br.com.db1.db1start.exercicios;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class exerciciosTeste {
+	
+	@Test
+	public void deveSomarDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int Soma = exercicio.somarDoisNumeros(5, 4);
+	System.out.println(Soma);
+	Assert.assertEquals(9,Soma);
+	}
+	
+	@Test
+	public void deveSubtrairDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int subtrair = exercicio.subtrairDoisNumeros(5, 4);
+	System.out.println(subtrair);
+	Assert.assertEquals(1,subtrair);
+	}
+	
+	@Test
+	public void deveMultiplicarDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int resultadoMultiplicacao = exercicio.multiplicaDoisNumeros(5, 4);
+	System.out.println(resultadoMultiplicacao);
+	Assert.assertEquals(20,resultadoMultiplicacao);
+	}
+	
+	@Test
+	public void deveDividirDoisNumeros() {
+	Exercicios exercicio = new Exercicios();
+	int resultadoDivisao = exercicio.divideDoisNumeros(6, 2);
+	System.out.println(resultadoDivisao);
+	Assert.assertEquals(3,resultadoDivisao);
+	}
+	
+	@Test
+	public void deveVerificarNumeroPar() {
+	Exercicios exercicio = new Exercicios();
+	int verificaPar = exercicio.verificaNumeroPar(6);
+	System.out.println(verificaPar);
+	Assert.assertEquals(1, verificaPar);
+	}
+	
+	@Test
+	public void deveRetornarMaiorNumero() {
+	Exercicios exercicio = new Exercicios();
+	int maiorNumero = exercicio.verificaQualEMaior(5,9);
+	System.out.println(maiorNumero);
+	Assert.assertEquals(9, maiorNumero);
+	}
+	
+	@Test
+	public void deveMostrarNumerosImparesAteCem() {
+	Exercicios exercicio = new Exercicios();
+	int numerosImpar = exercicio.numerosImparesAteCem(99);
+	System.out.println(numerosImpar);
+	Assert.assertEquals(1, numerosImpar);
+	}
+	
+}

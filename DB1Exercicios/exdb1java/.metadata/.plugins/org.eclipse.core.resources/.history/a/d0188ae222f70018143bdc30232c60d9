@@ -1,0 +1,34 @@
+package br.com.db1.db1start.exercicios;
+
+public class Exercicios {
+
+	public int somarDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm + numeroDois);
+	}
+	
+	public int subtrairDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm - numeroDois);
+	}
+	
+	public int multiplicaDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm * numeroDois);
+	}
+	
+	public int divideDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm / numeroDois);
+	}
+	
+	public int verificaNumeroPar(int numero){
+		if(numero % 2 == 0)
+		return 1;
+		else
+			return 0;
+	}
+	
+	public int verificaQualEMaior (int numeroUm, int numeroDois) {
+		if (numeroUm > numeroDois)
+			return (numeroUm);
+			else
+				return(numeroDois);
+	}
+}

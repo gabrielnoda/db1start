@@ -1,0 +1,91 @@
+package br.com.db1.db1start.exercicios;
+
+public class Exercicios {
+	//1 - FUM que some dois números
+	public int somarDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm + numeroDois);
+	}
+	
+	public int subtrairDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm - numeroDois);
+	}
+	
+	public int multiplicaDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm * numeroDois);
+	}
+	
+	public int divideDoisNumeros(int numeroUm, int numeroDois) {
+		return (numeroUm / numeroDois);
+	}
+	
+	public int verificaNumeroPar(int numero){
+		if(numero % 2 == 0)
+		return 1;
+		else
+			return 0;
+	}
+	
+	public int verificaQualEMaior (int numeroUm, int numeroDois) {
+		if (numeroUm > numeroDois)
+			return (numeroUm);
+			else
+				return(numeroDois);
+	}
+	
+	public int numerosImparesAteCem (int numero) {
+		int x, quantidade;
+		quantidade = 0;
+		for(x = numero; x < 100; x++) {
+			if (x % 2 == 1) {
+				quantidade++;
+			}
+		}
+		return (quantidade);
+		
+	}
+	
+	//Strings
+	public String devolverMaiuscula(String texto) {
+		return texto.toUpperCase();
+	}
+	
+	public String devolverMinuscula(String texto) {
+		return texto.toLowerCase();
+	}
+	
+	public int tamanhoTexto(String texto) {
+		return texto.length();
+	}
+	
+	public int tamanhoTextoComEspacamento(String texto) {
+		String texto2 =  texto.trim();
+		return texto2.length();
+	}
+	
+	public String retornarTextoSemEspacamento(String texto) {
+		return texto.trim();
+	}
+	
+	public String primeirasQuatroLetras(String nome) {
+		return nome.substring(0, 4);
+	}
+	
+
+	public String aPartirDaTerceiraLetra(String nome) {
+		return nome.substring(3);
+	}
+	
+	public String UltimasQuatroLetrasDoNome(String nome) {
+		return nome.substring(22);
+	}
+	
+	public String AlunoNoPrimeiroNome(String nome) {
+		String nome2 = nome.replace("Gabriel","Aluno");
+		return nome;
+	}
+}
+		
+		
+	
+
+

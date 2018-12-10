@@ -1,5 +1,0 @@
-INDEX VERSION 1.4+C:\Users\Aluno.DESKTOP-3ASBCDM\Desktop\Nova pasta\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3998934677.index
-2580483809.index
-1974402622.index
-2721857259.index

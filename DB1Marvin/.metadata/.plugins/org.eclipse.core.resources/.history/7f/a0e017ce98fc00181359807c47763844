@@ -1,9 +1,0 @@
-package br.com.db1.db1start.recibo.endereco;
-
-import javax.persistence.Entity;
-
-@Entity
-@Table(name = "endereco")
-public class Endereco {
-
-}

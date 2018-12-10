@@ -1,0 +1,7 @@
+package br.com.db1.db1start.recibo.cidade;
+
+public class Cidade {
+	private Long id;
+	private String nome;
+	
+}

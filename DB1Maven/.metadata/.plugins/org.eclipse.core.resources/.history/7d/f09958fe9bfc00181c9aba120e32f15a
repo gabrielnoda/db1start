@@ -1,0 +1,43 @@
+package br.com.db1.db1start.recibo.endereco;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import br.com.db1.db1start.recibo.cidade.Cidade;
+
+@Entity
+@Table(name = "endereco")
+public class Endereco {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@ManyToOne
+	@JoinColumn(name = "cidade_id", referencedColumnName = "id", nullable = false)
+	private Cidade cidade;
+
+	@Column(name = "logradouro", length = 60, nullable = false)
+	private String logradouro;
+
+	@Column(name = "numero", length = 10, nullable = false)
+	private String Numero;
+
+	@Column(name = "complemento", length = 30, nullable = false)
+	private String complemento;
+
+	@Column(name = "cep", length = 10, nullable = false)
+	private String cep;
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "TipoLogradouro", nullable = false)
+	private TipoLogradouro tipoLogradouro;
+
+}

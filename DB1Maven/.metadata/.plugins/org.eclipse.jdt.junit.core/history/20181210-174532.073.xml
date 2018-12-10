@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CidadeTest" project="Recibo" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.db1.db1start.recibo.cidade.CidadeTest" time="1.672">
+    <testcase name="deveSalvarUmaNovaCidade" classname="br.com.db1.db1start.recibo.cidade.CidadeTest" time="1.671"/>
+  </testsuite>
+</testrun>

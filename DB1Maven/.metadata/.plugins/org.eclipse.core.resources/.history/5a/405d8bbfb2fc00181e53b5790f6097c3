@@ -1,0 +1,43 @@
+package br.com.db1.db1start.recibo.cidade;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.postgresql.core.SetupQueryRunner;
+
+public class CidadeTest {
+
+	EntityManager em;
+	@Before
+	public void setUp() {
+		EntityManagerFactory efm = Persistence.createEntityManagerFactory("db1start");
+		em = efm.createEntityManager();
+		em.getTransaction().begin();
+	}
+	
+	@Test
+	public void deveSalvarUmaNovaCidade() {
+		Cidade cidade = new Cidade("Maringá", Uf.PR);
+
+		EntityManagerFactory efm = Persistence.createEntityManagerFactory("db1start");
+		EntityManager em = efm.createEntityManager();
+
+		em.getTransaction().begin();
+		em.persist(cidade);
+		em.getTransaction().commit();
+		em.close();
+	}
+	
+	public void deveAlterarCidade() {
+		EntityManagerFactory efm = Persistence.createEntityManagerFactory("db1start");
+		EntityManager em = efm.createEntityManager();
+		
+		em.getTransaction().begin();
+		em.persist(cidade);
+		
+	}
+
+}

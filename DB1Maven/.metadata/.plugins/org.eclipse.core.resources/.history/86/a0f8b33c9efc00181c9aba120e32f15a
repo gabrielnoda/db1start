@@ -1,0 +1,34 @@
+package br.com.db1.db1start.recibo.recibo;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Table;
+
+import br.com.db1.db1start.recibo.pessoa.Pessoa;
+
+@Entity
+@Table(name = "recibo")
+public class Recibo {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(name = "valor", nullable = false)
+	private Integer valor;
+
+	@JoinColumn(name = "prestador_id", referencedColumnName = "id", nullable = false)
+	private Pessoa prestador;
+
+	@JoinColumn(name = "emitente_id", referencedColumnName = "id", nullable = false)
+	private Pessoa emitente;
+
+	@Column(name = "dateEmissao", nullable = false)
+	private LocalDate dataemissao;
+}

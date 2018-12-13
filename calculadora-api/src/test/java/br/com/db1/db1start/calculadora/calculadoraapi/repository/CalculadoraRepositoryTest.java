@@ -1,6 +1,5 @@
 package br.com.db1.db1start.calculadora.calculadoraapi.repository;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,9 +19,26 @@ public class CalculadoraRepositoryTest {
 
 	@Test
 	public void deveSomarDoisNumeros() {
-		Calculadora calculadora = new Calculadora(2, 3);
-		Double resultadoSoma = calculadora.calcular(Operacao.SOMA);
-		Assert.assertEquals(5, resultadoSoma, 0);
+		Calculadora calculadora = new Calculadora(2D, 3D, Operacao.SOMA);
+		Assert.assertEquals(5D, calculadora.getResultadoOperacao(), 0.0);
+	}
+
+	@Test
+	public void deveSubtrairDoisNumeros() {
+		Calculadora calculadora = new Calculadora(2D, 3D, Operacao.SUBTRAI);
+		Assert.assertEquals(-1D, calculadora.getResultadoOperacao(), 0.0);
+	}
+
+	@Test
+	public void deveDividirDoisNumeros() {
+		Calculadora calculadora = new Calculadora(6D, 3D, Operacao.DIVIDE);
+		Assert.assertEquals(2D, calculadora.getResultadoOperacao(), 0.0);
+	}
+
+	@Test
+	public void deveMultiplicarDoisNumeros() {
+		Calculadora calculadora = new Calculadora(2D, 3D, Operacao.MULTIPLICA);
+		Assert.assertEquals(6D, calculadora.getResultadoOperacao(), 0.0);
 	}
 
 }

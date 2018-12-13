@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "calculadora")
 public class Calculadora {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -31,8 +31,8 @@ public class Calculadora {
 	@Column(name = "resultadoOperacao", nullable = false, length = 10)
 	private Double resultadoOperacao;
 
+	@Column(name = "operacao", nullable = false, length = 10)
 	@Enumerated(EnumType.STRING)
-	@Column(name = "operacoes", nullable = false, length = 10)
 	private Operacao operacao;
 
 	protected Calculadora() {
@@ -47,30 +47,30 @@ public class Calculadora {
 		this.dataOperacao = LocalDateTime.now();
 	}
 
-	public void calcular() {
+	private void calcular() {
 		resultadoOperacao = operacao.calcular(numeroUm, numeroDois);
 	}
-	
+
 	public Long getId() {
 		return id;
 	}
-	
+
 	public Double getNumeroUm() {
 		return numeroUm;
 	}
-	
+
 	public Double getNumeroDois() {
 		return numeroDois;
 	}
-	
+
 	public Double getResultadoOperacao() {
 		return resultadoOperacao;
 	}
-	
+
 	public Operacao getOperacao() {
 		return operacao;
 	}
-	
+
 	public LocalDateTime getDataOperacao() {
 		return dataOperacao;
 	}

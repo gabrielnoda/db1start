@@ -1,6 +1,8 @@
 package br.com.db1.db1start.calculadora.calculadoraapi.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +18,10 @@ public class CalculadoraService {
 	
 	public Calculadora salvaOperacao(Double numeroUm, Double numeroDois, Operacao operacao) {
 		Calculadora calculadora = new Calculadora(numeroUm, numeroDois, operacao);
-		return calculadora;
+		return calculadoraRepository.save(calculadora);
 	}
 
-}
+	public List<Calculadora> buscarTodosCalculos(){
+		return calculadoraRepository.findAll();
+	}
+ }
